@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('status')->default('offline'); // online, offline, down
             $table->decimal('rx_power', 5, 2)->nullable(); // Signal RX
             $table->decimal('tx_power', 5, 2)->nullable(); // Signal TX
+            $table->date('installation_date')->nullable();
             $table->timestamp('last_seen')->nullable();
             $table->boolean('is_active')->default(true);
             $table->text('notes')->nullable();
